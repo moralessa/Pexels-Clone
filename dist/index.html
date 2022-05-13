@@ -17,17 +17,21 @@
                     fill="#fff"></path>
             </svg>
         </div>
-        <p>Pexels</p>
-        <div class="nav-input-container">
-            <input type="text" placeholder="Search for free photos">
-            <div class="nav-search-icon-container">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                    </path>
-                </svg>
+        <p class="logo-text">Pexels</p>
+        <form id="nav-form">
+            <div class="nav-input-container">
+                <input id="nav-input" type="text" autocomplete="off" placeholder="Search for free photos" required>
+                <div class="nav-search-icon-container">
+                    <button type="submit" id="nav-search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     </nav>
 
     <section class="hero">
@@ -36,16 +40,20 @@
             <div class="hero-text-container">
                 <h2 class="hero-text">The best free stock photos, royalty free images & videos shared by creators.</h2>
             </div>
-            <div class="input-container">
-                <input type="text" placeholder="Search for free photos and videos">
-                <div class="search-icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                        </path>
-                    </svg>
+            <form id="hero-form">
+                <div class="input-container">
+                    <input id="hero-input" type="text" autocomplete="off" placeholder="Search for free photos and videos" required>
+                    <div class="search-icon-container">
+                        <button type="submit" id="hero-search-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
             <div class="blockquote-container">
                 <blockquote><b>Suggested: </b>nature wallpaper, hd background, beautiful, background, animals, mountains,
                     more</blockquote>
@@ -56,15 +64,11 @@
     <main>
         <div class="main-header">
             <h5>Free Stock Photos</h5>
-            <div class="trending-selection-container">
-                <p class="selected">Trending
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
-                </p>
-                <ul>
-                    <li id="trending">Trending</li>
-                    <li id="new">New</li>
-                </ul>
-            </div>
+        </div>
+        <div id="image-gallery">
+            <div id="col-1" class="image-column"></div>
+            <div id="col-2" class="image-column"></div>
+            <div id="col-3" class="image-column"></div>
         </div>
     </main>
 
