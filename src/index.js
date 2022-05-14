@@ -61,7 +61,7 @@ function populateColumn(imageObj, parentColumn){ // Helper function to populate 
     let imageContainer = document.createElement('div');
     imageContainer.classList.add('image-container');
     let image = document.createElement('img');
-    image.src = imageObj.src.medium;
+    image.src = imageObj.src.large;
     image.alt = image.alt;
     let photographer = document.createElement('p');
     photographer.classList.add('photographer');
