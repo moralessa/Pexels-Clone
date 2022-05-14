@@ -10,6 +10,7 @@ const heroForm = document.getElementById('hero-form');
 const columnOne = document.getElementById('col-1');
 const columnTwo = document.getElementById('col-2');
 const columnThree = document.getElementById('col-3');
+const heroText = document.querySelector('.hero-text-container');
 let photosArr;
 let count = 0;
 
@@ -76,12 +77,10 @@ window.addEventListener('scroll',() =>{ // Event Listener that appends populatio
     }
 })
 
-window.addEventListener('scroll', () =>{ // Event listener for nav toggle functionality
-    navToggle();
-})
+window.addEventListener('scroll', navToggle); // Event listener for nav toggle functionality
 
 function navToggle(){ //nav toggle
-    if(window.scrollY > (heroForm.offsetHeight + heroForm.offsetTop)){
+    if(window.scrollY > (heroForm.offsetHeight + heroText.offsetTop)){
         nav.classList.add('dark');
     }else{
         nav.classList.remove('dark');

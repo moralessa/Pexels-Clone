@@ -95,6 +95,10 @@ nav{
                     font-weight: 400;
                     color: gray;
                     font-size: 17px;
+
+                    @media only screen and (max-width: 600px) {
+                        font-size: 14px;
+                    }
                 }
             }
     
@@ -104,6 +108,10 @@ nav{
                 position: absolute;
                 top: 10%;
                 left: 92%;
+
+                @media only screen and (max-width: 600px) {
+                    display: none;
+                }
             }
         }
     }
@@ -129,6 +137,10 @@ nav{
         width: 100%;
         display: grid;
         place-items: center;
+
+        @media only screen and (max-width: 600px) {
+            top: 18%;
+        }
     }
 
     .hero-text-container{
@@ -141,6 +153,10 @@ nav{
         line-height: 3rem;
         color: white;
         font-weight: 700;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 26px;
+        }
     }
 
     form{
@@ -184,6 +200,10 @@ nav{
                     font-weight: 400;
                     color: gray;
                     font-size: 17px;
+
+                    @media only screen and (max-width: 600px) {
+                        font-size: 14px;
+                    }
                 }
             }
     
@@ -191,6 +211,10 @@ nav{
                 position: absolute;
                 top: 30%;
                 left: 93%;
+
+                @media only screen and (max-width: 600px) {
+                    display: none;
+                }
             }
         }
     }
@@ -211,14 +235,12 @@ nav{
 
 main{//main styling
     border-top: 1px solid #f1f1f1;
-    margin-top: 10px;
-    padding-top: 10px;
-
     .main-header{
         display: flex;
+        width: 100%;
         max-width: 1500px;
         justify-content: flex-start;
-        margin-bottom: 15px;
+        margin: 15px auto;
 
         h5{
             padding-left: 15px;
@@ -234,7 +256,6 @@ main{//main styling
         align-items: flex-start;
         width: 100%;
         max-width: 1500px;
-        min-width: 600px;
         margin: auto;
     
         .image-column{
