@@ -59,6 +59,7 @@ function populateGallery(){ // Helper function to populate the gallery
         photographer.textContent = photosArr[i].photographer;
         imageContainer.append(image, photographer);
         gallery.append(imageContainer);
+        
     }
 }
 
