@@ -250,21 +250,12 @@ main{//main styling
     }
 
     #image-gallery{ //image gallery styling
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
-        width: 100%;
+    
+        width: 95%;
         max-width: 1500px;
         margin: auto;
-    
-        .image-column{
-            width: 32%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: flex-start;
-        }
+        columns: 3;
+        column-width: 300px;
     
         .image-container{
             width: 100%;

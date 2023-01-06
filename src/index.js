@@ -7,9 +7,7 @@ const navInput = document.getElementById('nav-input');
 const heroInput = document.getElementById('hero-input');
 const navForm = document.getElementById('nav-form');
 const heroForm = document.getElementById('hero-form');
-const columnOne = document.getElementById('col-1');
-const columnTwo = document.getElementById('col-2');
-const columnThree = document.getElementById('col-3');
+const gallery = document.getElementById('image-gallery');
 const heroText = document.querySelector('.hero-text-container');
 let photosArr;
 let count = 0;
@@ -50,26 +48,19 @@ function makeRequest(inp){
 }
 
 function populateGallery(){ // Helper function to populate the gallery
-    for(let i = 0; i <= 15; i+= 3){
-        populateColumn(photosArr[count++], columnOne);
-        populateColumn(photosArr[count++], columnTwo);
-        populateColumn(photosArr[count++], columnThree);
+    for(let i = 0; i <= 15; i++){
+        let imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container');
+        let image = document.createElement('img');
+        image.src = photosArr[i].src.large;
+        image.alt = image.alt;
+        let photographer = document.createElement('p');
+        photographer.classList.add('photographer');
+        photographer.textContent = photosArr[i].photographer;
+        imageContainer.append(image, photographer);
+        gallery.append(imageContainer);
     }
 }
-
-function populateColumn(imageObj, parentColumn){ // Helper function to populate each column
-    let imageContainer = document.createElement('div');
-    imageContainer.classList.add('image-container');
-    let image = document.createElement('img');
-    image.src = imageObj.src.large;
-    image.alt = image.alt;
-    let photographer = document.createElement('p');
-    photographer.classList.add('photographer');
-    photographer.textContent = imageObj.photographer;
-    imageContainer.append(image, photographer);
-    parentColumn.append(imageContainer);
-}
-
 
 window.addEventListener('scroll',() =>{ // Event Listener that appends population of gallery when you scroll to the bottom of the page
     if(window.innerHeight + window.scrollY >= document.body.scrollHeight){
